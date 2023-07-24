@@ -153,6 +153,22 @@ class Chatbot:
         self.messages = []
         self.messages.append({"role":"system","content": self.description})
 
+class Imagebot:
+    def __init__(self, key):
+        "Class for an imagebot. Uses openai's API, so it needs a key."
+        self.key = key
+
+    def generate(self, prompt, width, height):
+        "Generates an image from a prompt"
+        response = openai.Image.create(
+            file=open(prompt, "rb"),
+            purpose="view",
+            width=width,
+            height=height
+        )
+        return f"""View at:
+{response["url"]}"""
+
 class Random:
     def __init__(self):
         pass

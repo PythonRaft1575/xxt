@@ -28,6 +28,14 @@ print(bot.chat(message)) # Chat with the bot and print the response
 bot.clear() # Clear the chat history
 ```
 
+#### Imagebot Class
+```py
+import xxt
+
+bot = xxt.Imagebot("Replace with OpenAI API key") # Make the object
+print(bot.generate("A blue cat", 512, 512)) # Generate a link for the image
+```
+
 #### Random Class
 
 ```py

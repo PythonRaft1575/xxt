@@ -7,7 +7,7 @@ XXT is a multifunctional Python library designed to enhance various aspects of p
 > - Wait function
 > - Clear function
 > - Functions to get time and date
-> - Classes for a chatbot, numbers and random choices
+> - Classes for a chatbot, imagebot, numbers and random choices
 
 ## Installation
 
@@ -29,3 +29,8 @@ pip install xxt
 0.0.3 (22/07/2023)
 
 > - Chatbot Class
+
+0.0.4 (23/07/2023)
+
+> - Imagebot Class
+> - Better Documentation
