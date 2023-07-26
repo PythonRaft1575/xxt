@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: xxt
-Version: 0.0.4
+Version: 0.0.5
 Summary: XXT is a multifunctional Python library designed to enhance various aspects of programming by providing an extensive set of functions and classes related to time, numbers, and randomization.
 Home-page: https://pythonraft1575.github.io/xxt/
 Author: Xi Teo
@@ -38,7 +38,7 @@ pip install xxt
 
 > - First Release
 
-0.0.2 (20/07/2023)
+0.0.2 (22/07/2023)
 
 > - Better Documentation
 > - Changelog
@@ -47,7 +47,11 @@ pip install xxt
 
 > - Chatbot Class
 
-0.0.4 (24/07/2023)
+0.0.4 (26/07/2023)
 
 > - Imagebot Class
 > - Better Documentation (website)
+
+0.0.5 (26/07/2023)
+
+> - QR Code Generator

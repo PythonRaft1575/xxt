@@ -1,4 +1,4 @@
-from setuptools import setup, find_packages
+from setuptools import setup
 
 # To use a consistent encoding
 from codecs import open
@@ -14,7 +14,7 @@ with open(path.join(HERE, 'README.md'), encoding='utf-8') as f:
 # This call to setup() does all the work
 setup(
     name="xxt",
-    version="0.0.4",
+    version="0.0.5",
     description="XXT is a multifunctional Python library designed to enhance various aspects of programming by providing an extensive set of functions and classes related to time, numbers, and randomization.",
     long_description=long_description,
     long_description_content_type="text/markdown",
@@ -31,5 +31,5 @@ setup(
     ],
     packages=["xxt"],
     include_package_data=True,
-    install_requires=["datetime", "openai"]
+    install_requires=["datetime", "openai", "qrcode"]
 )

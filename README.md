@@ -36,3 +36,7 @@ pip install xxt
 
 > - Imagebot Class
 > - Better Documentation (website)
+
+0.0.5 (26/07/2023)
+
+> - QR Code Generator

@@ -3,6 +3,7 @@ import time
 import random
 import datetime
 import openai
+import qrcode
 
 class Number:
     def __init__(self, number):
@@ -141,7 +142,7 @@ class Chatbot:
         "Chat with the chatbot"
         self.messages.append({"role":"user","content": message})
         response = openai.ChatCompletion.create(
-            model="gpt-4",
+            model="gpt-3.5-turbo", # other models include gpt-4 or gpt-3.5-turbo
             messages=self.messages
         )
         reply = response["choices"][0]["message"]["content"]
@@ -203,3 +204,9 @@ def getdate():
 def gettime():
     "Returns the time"
     return datetime.datetime.now().strftime("%H:%M")
+
+def qrcode(text, filename):
+    """Generates a QR Code for the specified text to a certain file
+    Filename must be a .png file, include .png in the filename"""
+    img = qrcode.make(text)
+    img.save(filename)

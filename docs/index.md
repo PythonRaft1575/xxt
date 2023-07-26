@@ -49,6 +49,13 @@ print(ran.float(1, 10)) # Print a random float between 1, 10
 print(ran.choice(list)) # Print a random choice from 'list'
 ```
 
+#### QR Code
+```py
+import xxt
+
+xxt.qr("Hello World", "file.png") # Generate a QR code for "Hello World" to "file.png"
+```
+
 #### Other Functions
 
 ```py

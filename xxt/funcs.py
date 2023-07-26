@@ -3,6 +3,7 @@ import time
 import random
 import datetime
 import openai
+import qrcode
 
 class Number:
     def __init__(self, number):
@@ -203,3 +204,9 @@ def getdate():
 def gettime():
     "Returns the time"
     return datetime.datetime.now().strftime("%H:%M")
+
+def qrcode(text, filename):
+    """Generates a QR Code for the specified text to a certain file
+    Filename must be a .png file, include .png in the filename"""
+    img = qrcode.make(text)
+    img.save(filename)
