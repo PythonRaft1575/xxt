@@ -23,7 +23,7 @@ pip install xxt
 
 > - First Release
 
-0.0.2 (20/07/2023)
+0.0.2 (22/07/2023)
 
 > - Better Documentation
 > - Changelog
@@ -32,7 +32,7 @@ pip install xxt
 
 > - Chatbot Class
 
-0.0.4 (24/07/2023)
+0.0.4 (26/07/2023)
 
 > - Imagebot Class
 > - Better Documentation (website)
