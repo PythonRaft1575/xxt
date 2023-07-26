@@ -141,7 +141,7 @@ class Chatbot:
         "Chat with the chatbot"
         self.messages.append({"role":"user","content": message})
         response = openai.ChatCompletion.create(
-            model="gpt-4",
+            model="gpt-3.5-turbo", # other models include gpt-4 or gpt-3.5-turbo
             messages=self.messages
         )
         reply = response["choices"][0]["message"]["content"]

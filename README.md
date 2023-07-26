@@ -1,6 +1,8 @@
 # XXT
 
-XXT is a multifunctional Python library designed to enhance various aspects of programming by providing an extensive set of functions and classes related to time, numbers, and randomization.
+XXT is a multifunctional Python library designed to enhance various aspects of programming by providing an extensive set of functions and classes related to time, numbers, and randomization. 
+
+An additional class for using the chat API of OpenAI included (need your own OpenAPI token)
 
 Additional classes for using the chat and image API of OpenAI included (need your own OpenAPI token)
 
