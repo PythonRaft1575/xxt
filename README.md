@@ -2,6 +2,8 @@
 
 XXT is a multifunctional Python library designed to enhance various aspects of programming by providing an extensive set of functions and classes related to time, numbers, and randomization.
 
+Additional classes for using the chat and image API of OpenAI included (need your own OpenAPI token)
+
 ## Uses
 
 > - Wait function
@@ -30,7 +32,7 @@ pip install xxt
 
 > - Chatbot Class
 
-0.0.4 (23/07/2023)
+0.0.4 (24/07/2023)
 
 > - Imagebot Class
-> - Better Documentation
+> - Better Documentation (website)

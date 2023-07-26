@@ -133,7 +133,7 @@ class Chatbot:
         "Class for a chatbot. Uses openai's API, so it needs a key. Description is the chatbot's description, do not include the chatbot's name."
         self.name = name
         self.description = description
-        self.key = key
+        openai.api_key = key
         self.messages = []
         self.messages.append({"role":"system","content": f"You are {name}. {description}"})
 
@@ -156,15 +156,18 @@ class Chatbot:
 class Imagebot:
     def __init__(self, key):
         "Class for an imagebot. Uses openai's API, so it needs a key."
-        self.key = key
+        openai.api_key = key
 
     def generate(self, prompt, width, height):
-        "Generates an image from a prompt"
+        """Generates an image from a prompt
+        The width of the image. Must be 256, 512, or 1024.
+        The height of the image. Must be 256, 512, or 1024."""
+        if width not in [256, 512, 1024] or height not in [256, 512, 1024]:
+            return "Invalid width or height. Width and height must be 256, 512, or 1024."
         response = openai.Image.create(
-            file=open(prompt, "rb"),
-            purpose="view",
-            width=width,
-            height=height
+            prompt=prompt,
+            n=1,
+            size = f"{width}x{height}"
         )
         return f"""View at:
 {response["url"]}"""
