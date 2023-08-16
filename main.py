@@ -129,49 +129,51 @@ class Number:
 TRAITS
 {traits_str}"""
 
-class Chatbot:
-    def ___init__(self, name, description, key):
-        "Class for a chatbot. Uses openai's API, so it needs a key. Description is the chatbot's description, do not include the chatbot's name."
-        self.name = name
-        self.description = description
-        openai.api_key = key
-        self.messages = []
-        self.messages.append({"role":"system","content": f"You are {name}. {description}"})
+class AI:
+    "Class for an AI"
+    class Chatbot:
+        def ___init__(self, name, description, key):
+            "Class for a chatbot. Uses openai's API, so it needs a key. Description is the chatbot's description, do not include the chatbot's name."
+            self.name = name
+            self.description = description
+            openai.api_key = key
+            self.messages = []
+            self.messages.append({"role":"system","content": f"You are {name}. {description}"})
 
-    def chat(self, message):
-        "Chat with the chatbot"
-        self.messages.append({"role":"user","content": message})
-        response = openai.ChatCompletion.create(
-            model="gpt-3.5-turbo", # other models include gpt-4 or gpt-3.5-turbo
-            messages=self.messages
-        )
-        reply = response["choices"][0]["message"]["content"]
-        self.messages.append({"role":"system","content": reply})
-        return reply
-    
-    def clear(self):
-        "Clears the chat"
-        self.messages = []
-        self.messages.append({"role":"system","content": self.description})
+        def chat(self, message):
+            "Chat with the chatbot"
+            self.messages.append({"role":"user","content": message})
+            response = openai.ChatCompletion.create(
+                model="gpt-3.5-turbo", # other models include gpt-4 or gpt-3.5-turbo
+                messages=self.messages
+            )
+            reply = response["choices"][0]["message"]["content"]
+            self.messages.append({"role":"system","content": reply})
+            return reply
+        
+        def clear(self):
+            "Clears the chat"
+            self.messages = []
+            self.messages.append({"role":"system","content": self.description})
 
-class Imagebot:
-    def __init__(self, key):
-        "Class for an imagebot. Uses openai's API, so it needs a key."
-        openai.api_key = key
+    class Imagebot:
+        def __init__(self, key):
+            "Class for an imagebot. Uses openai's API, so it needs a key."
+            openai.api_key = key
 
-    def generate(self, prompt, width, height):
-        """Generates an image from a prompt
-        The width of the image. Must be 256, 512, or 1024.
-        The height of the image. Must be 256, 512, or 1024."""
-        if width not in [256, 512, 1024] or height not in [256, 512, 1024]:
-            return "Invalid width or height. Width and height must be 256, 512, or 1024."
-        response = openai.Image.create(
-            prompt=prompt,
-            n=1,
-            size = f"{width}x{height}"
-        )
-        return f"""View at:
-{response["url"]}"""
+        def generate(self, prompt, width, height):
+            """Generates an image from a prompt
+            The width of the image. Must be 256, 512, or 1024.
+            The height of the image. Must be 256, 512, or 1024."""
+            if width not in [256, 512, 1024] or height not in [256, 512, 1024]:
+                return "Invalid width or height. Width and height must be 256, 512, or 1024."
+            response = openai.Image.create(
+                prompt=prompt,
+                n=1,
+                size = f"{width}x{height}"
+            )
+            return f"""View at:
+    {response["url"]}"""
 
 class Random:
     def __init__(self):

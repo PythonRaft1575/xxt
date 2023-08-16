@@ -18,20 +18,18 @@ print(ten.strobogrammatic) # Print whether it is strobogrammatic (when turned up
 print(ten.strobogrammaticdifferent) # Print whether it is strobogrammatic different (when turned upside down is a different number)
 ```
 
-#### Chatbot Class
+#### AI Class
+
 ```py
 import xxt
 
+#ChatBot
 bot = xxt.Chatbot("Bot", "You are a friendly bot.", "Replace with OpenAI API key") # Make the object
 message = input("Message: ") # Get the message
 print(bot.chat(message)) # Chat with the bot and print the response
 bot.clear() # Clear the chat history
-```
 
-#### Imagebot Class
-```py
-import xxt
-
+#Imagebot
 bot = xxt.Imagebot("Replace with OpenAI API key") # Make the object
 print(bot.generate("A blue cat", 512, 512)) # Generate a link for the image
 ```

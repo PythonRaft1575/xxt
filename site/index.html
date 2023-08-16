@@ -77,17 +77,16 @@ print(ten.palindrome) # Print whether it is a palindrome or not
 print(ten.strobogrammatic) # Print whether it is strobogrammatic (when turned upside down is the same)
 print(ten.strobogrammaticdifferent) # Print whether it is strobogrammatic different (when turned upside down is a different number)
 </code></pre>
-<h4 id="chatbot-class">Chatbot Class</h4>
+<h4 id="ai-class">AI Class</h4>
 <pre><code class="language-py">import xxt
 
+#ChatBot
 bot = xxt.Chatbot(&quot;Bot&quot;, &quot;You are a friendly bot.&quot;, &quot;Replace with OpenAI API key&quot;) # Make the object
 message = input(&quot;Message: &quot;) # Get the message
 print(bot.chat(message)) # Chat with the bot and print the response
 bot.clear() # Clear the chat history
-</code></pre>
-<h4 id="imagebot-class">Imagebot Class</h4>
-<pre><code class="language-py">import xxt
 
+#Imagebot
 bot = xxt.Imagebot(&quot;Replace with OpenAI API key&quot;) # Make the object
 print(bot.generate(&quot;A blue cat&quot;, 512, 512)) # Generate a link for the image
 </code></pre>
@@ -193,5 +192,5 @@ xxt.clear() # Clears console
 
 <!--
 MkDocs version : 1.4.3
-Build Date UTC : 2023-07-26 12:38:46.647804+00:00
+Build Date UTC : 2023-08-16 08:38:31.938121+00:00
 -->

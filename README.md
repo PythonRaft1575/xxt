@@ -40,3 +40,7 @@ pip install xxt
 0.0.5 (26/07/2023)
 
 > - QR Code Generator
+
+0.0.6 (16/08/2023)
+
+> - Moved AI Classes to new AI Class
